@@ -22,13 +22,13 @@ jobs:
           node-version: 18
 
       - name: Install dependencies
-        uses: npm install
+        run: npm install
 
       - name: Run tests
-        uses: npm test
+        run: npm test # Uses Jest
 
       - name: Build application
-        uses: npm run build
+        run: npm run build
 
       - name: Deploy (optional)
         if: success()
